@@ -6,7 +6,6 @@ import shutil
 target_repo_location = 'F:/College/Programming and stuff/Bin/cpp-chronicles/codeblocks/git_repos'
 # This is the direcory in which the repos will be staged to prevent data loss in case of abort
 stage_repo_location = 'F:/College/Programming and stuff/Bin/cpp-chronicles/codeblocks/git_repos/stage'
-#stage_repo_location = 'C:/Users/hpp/Documents/PycharmProjects/git_repos/stage'
 # In[]
 fi = open('git_repo_list.txt', mode = 'r',  encoding='utf-8', errors='ignore')
 repo_list = [i.replace('\n','') for i in fi.readlines() if i != '\n']
@@ -31,10 +30,6 @@ if not os.path.isdir(target_repo_location):
 if not os.path.isdir(stage_repo_location):
     os.makedirs(stage_repo_location)
 
-# In[]
-test = repo_list[0]
-print(os.path.split(test), os.path.sep, os.path.split(test)[0].split(os.path.sep))
-#copyDirectory(test, target_repo_location + '/test.git')    
 # In[]
 for repo in repo_list:
     # Get the name of the parent folder as the name for the repo and append git
